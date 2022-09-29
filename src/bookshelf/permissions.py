@@ -10,3 +10,8 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
 
         # Instance must have an attribute named `owner`.
         return obj.user_created == request.user
+    
+    
+class IsActive(permissions.BasePermission):
+    def has_permission(self, request, view):
+        return True if request.user.is_active else False

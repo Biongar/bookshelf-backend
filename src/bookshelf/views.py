@@ -5,14 +5,14 @@ from rest_framework import status
 
 from .models import Book
 from .serializers import BookSerializer
-from .permissions import IsOwnerOrReadOnly
+from .permissions import IsOwnerOrReadOnly, IsActive
 from .paginators import Pagination
 from .filters import BookFilterSet
 
 class BookViewSet(ModelViewSet):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
-    permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
+    permission_classes = [IsAuthenticated, IsOwnerOrReadOnly, IsActive]
     http_method_names = ['get', 'post', 'patch', 'delete', 'head']
     pagination_class = Pagination
     filter_class = BookFilterSet
