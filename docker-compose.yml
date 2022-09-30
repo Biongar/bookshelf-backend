@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:14.5-alpine
+    restart: always
+    env_file:
+      - .env
+
+  app:
+    build: .
+    command: /bin/sh /code/bookshelf/bin/entrypoint.sh
+    ports:
+      - 8000:80
+    env_file:
+      - .env
