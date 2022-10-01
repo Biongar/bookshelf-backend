@@ -1,16 +1,33 @@
 version: '3.8'
 
 services:
-  db:
+  postgres_db:
+    container_name: bookshelf_db
     image: postgres:14.5-alpine
     restart: always
+    ports:
+      - 5433:5432
+    volumes:
+      - bookshelf_db_volume:/code/bookshelf/data/postgres_db/
     env_file:
       - .env
 
   app:
-    build: .
+    image: .
+    container_name: bookshelf_app
+    restart: always
     command: /bin/sh /code/bookshelf/bin/entrypoint.sh
+    volumes:
+      - bookshelf_app_volume:/code/bookshelf/data/bookshelf/
     ports:
       - 8000:80
     env_file:
       - .env
+    depends_on:
+      - postgres_db
+
+volumes:
+  bookshelf_app_volume:
+  bookshelf_db_volume:
+
+  

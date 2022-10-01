@@ -4,6 +4,8 @@
 
 .env
 
+data/
+
 venv/
 
 media/*

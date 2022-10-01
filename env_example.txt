@@ -1,0 +1,9 @@
+# Main settings
+SECRET_KEY='foo'
+
+
+# DATABASE settings
+
+POSTGRES_DB='db_name'
+POSTGRES_USER='db_user'
+POSTGRES_PASSWORD='password'
