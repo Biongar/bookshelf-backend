@@ -19,9 +19,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000'
-]
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
@@ -147,7 +146,6 @@ REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
     ),
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
@@ -156,7 +154,7 @@ REST_FRAMEWORK = {
 SPECTACULAR_SETTINGS = { 
     'TITLE': 'Bookshelf API',
     'DESCRIPTION': 'Данное API разработано для приложения "Книжный шкаф".',
-    'VERSION': '0.0.1',
+    'VERSION': '1.0.0',
 }
 
 SIMPLE_JWT = {

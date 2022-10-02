@@ -156,7 +156,7 @@ REST_FRAMEWORK = {
 SPECTACULAR_SETTINGS = { 
     'TITLE': 'Bookshelf API',
     'DESCRIPTION': 'Данное API разработано для приложения "Книжный шкаф".',
-    'VERSION': '0.0.1',
+    'VERSION': '1.0.0',
 }
 
 SIMPLE_JWT = {

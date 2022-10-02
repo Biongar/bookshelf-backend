@@ -7,5 +7,5 @@ python manage.py migrate --noinput --settings=config.settings.production_setting
 python manage.py collectstatic --noinput --settings=config.settings.production_settings
 gunicorn config.wsgi:application \
 --bind=0.0.0.0:80 \
---workers=1 \
+--workers=9 \
 --env DJANGO_SETTINGS_MODULE=config.settings.production_settings

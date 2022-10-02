@@ -1,0 +1,1 @@
+import{d as r,u as t,r as n,o as a,s as u,k as c}from"./index.0ad1aa9b.js";const h=r({__name:"BookshelfIndexView",setup(i){const e=t(),s=c();return e.$state.thisUser.userdata||s.push({name:"login"}),(p,m)=>{const o=n("router-view");return a(),u(o)}}});export{h as default};
