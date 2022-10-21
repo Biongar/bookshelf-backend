@@ -4,7 +4,7 @@ from pathlib import Path
 from dotenv import dotenv_values
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 env = dotenv_values('.env')
@@ -156,7 +156,7 @@ REST_FRAMEWORK = {
 SPECTACULAR_SETTINGS = { 
     'TITLE': 'Bookshelf API',
     'DESCRIPTION': 'Данное API разработано для приложения "Книжный шкаф".',
-    'VERSION': '0.0.1',
+    'VERSION': '1.0.0',
 }
 
 SIMPLE_JWT = {

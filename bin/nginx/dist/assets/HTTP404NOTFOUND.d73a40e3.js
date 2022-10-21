@@ -1,0 +1,1 @@
+import{_ as e,o as t,c,a as s}from"./index.0ad1aa9b.js";const n={},o={class:"d-flex align-items-center justify-content-center vh-100"},a=s("h1",null,"404 \u0421\u0422\u0420\u0410\u041D\u0418\u0426\u0410 \u041D\u0415 \u041D\u0410\u0419\u0414\u0415\u041D\u0410",-1),r=[a];function _(i,d){return t(),c("div",o,r)}var f=e(n,[["render",_]]);export{f as default};
